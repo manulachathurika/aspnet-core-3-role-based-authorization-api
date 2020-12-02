@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>API</name>
+    </assembly>
+    <members>
+        <member name="M:API.Controllers.ConfigController.UploadScorecardConfig(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            Upload scorecard config JSON
+            </summary>
+        </member>
+        <member name="M:API.Controllers.LogsController.GetLogbyFilterAsync(System.String)">
+            <summary>
+            Retrieve log messages using log id
+            </summary>
+            <param name="LogUniqueId">Ex : 123456364_20200820</param>
+        </member>
+        <member name="M:API.Controllers.LogsController.Get">
+            <summary>
+            Download log file to client 
+            </summary>
+        </member>
+        <member name="M:API.Controllers.LogsController.GetInnerLogByDate(System.Nullable{System.DateTime})">
+            <summary>
+            Retrive inner log using Date
+            </summary>
+            <param name="FromDate">Ex: 2020-09-01</param>
+        </member>
+        <member name="M:API.Controllers.ScorecardController.GetSocrecardbysubSector(System.String,System.Int32,System.Int32,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Retrieve scorecard data by using subsector
+            </summary>
+            <param name="SubsectorLable">Ex : Automakers</param>
+            <param name="SubsectorId">Ex : 1001</param>
+            <param name="ScoreCardVersion">Ex : 1</param>
+            <param name="Sector">Ex : Automotive</param>
+            <param name="Year">Ex : 2020</param>
+            <param name="PageNumber">Ex : 1</param>
+            <param name="PageSize">Ex : 50</param>
+        </member>
+        <member name="M:API.Controllers.ScorecardController.GetSocrecardbyAukAndTicker(System.String,System.String,System.Int32,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Retrieve scorecard data by using AUK and Ticker
+            </summary>
+            <param name="AUK">Particular AUK number</param>
+            <param name="Ticker">Particular Ticker</param>
+            <param name="ScoreCardVersion">Ex : 1</param>
+            <param name="Sector">Ex : Automotive</param>
+            <param name="Year">Ex : 2020</param>
+            <param name="PageNumber">Ex : 1</param>
+            <param name="PageSize">Ex : 50</param>
+        </member>
+        <member name="M:API.Controllers.ScorecardController.GetSocrecardbyCompany(System.String,System.Int32,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Retrieve scorecard data by using company name
+            </summary>
+            <param name="CompanyName">Particular company name</param>
+            <param name="ScoreCardVersion">Ex : 1</param>
+            <param name="Sector">Ex : Automotive</param>
+            <param name="Year">Ex : 2020</param>
+            <param name="PageNumber">Ex : 1</param>
+            <param name="PageSize">Ex : 50</param>
+        </member>
+        <member name="M:API.Controllers.ScorecardController.GetScoreCardByID(System.String)">
+            <summary>
+            Retrieve scorecard data by using corresponding record id
+            </summary>
+            <param name="Id">Particular record id</param>
+        </member>
+        <member name="M:API.Controllers.ScorecardController.GetScoreCardByFrequency(System.String,System.Int32,System.String,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Retrieve scorecard data by using frequency
+            </summary>
+            <param name="Frequency">Ex : Q1, S1, 9M or FY</param>
+            <param name="ScoreCardVersion">Ex : 1</param>
+            <param name="Sector">Ex : Automotive</param>
+            <param name="Year">Ex : 2020</param>
+            <param name="PageNumber">Ex : 1</param>
+            <param name="PageSize">Ex : 50</param>
+        </member>
+        <member name="M:API.Controllers.ScorecardController.GetSocrecardbyYear(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Retrieve scorecard data for year range
+            </summary>
+            <param name="Sector">Ex : Automotive</param>
+            <param name="FromYear">Ex : 2015</param>
+            <param name="ToYear">Ex : 2020</param>
+            <param name="PageNumber">Ex : 1</param>
+            <param name="PageSize">Ex : 50</param>
+        </member>
+        <member name="M:API.Controllers.SectorAndSubSectorController.GetSector">
+            <summary>
+            Retrieve all the secotrs along with it's id
+            </summary>
+        </member>
+        <member name="M:API.Controllers.SectorAndSubSectorController.InsertSector(System.String)">
+            <summary>
+            Insert sector into the database
+            </summary>
+            <param name="Sector">Ex : 'Automotive'</param>
+        </member>
+        <member name="M:API.Controllers.SectorAndSubSectorController.DeleteSector(System.Int32,System.Boolean)">
+            <summary>
+            Delete Sector by Sector ID
+            </summary>
+            <param name="SectorID">Ex : 1</param>
+            <param name="CascadeDelete">Ex : False </param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.SectorAndSubSectorController.GetSubSector">
+            <summary>
+            Retrieve all the subsecotrs along with it's id
+            </summary>
+        </member>
+        <member name="M:API.Controllers.SectorAndSubSectorController.InsertSubSector(System.String)">
+            <summary>
+            Insert subsector into the database
+            </summary>
+            <param name="SubSector">Ex : 'Automakers'</param>
+        </member>
+        <member name="M:API.Controllers.SectorAndSubSectorController.DeleteSubSector(System.Int32,System.Boolean)">
+            <summary>
+            Delete SubSector by SubSector ID
+            </summary>
+            <param name="SubSectorID">Ex : 1</param>
+            <param name="CascadeDelete">Ex : False </param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.SectorAndSubSectorController.GetSectorSubSectorMapping">
+            <summary>
+            Retrieve all sector subsector mappings
+            </summary>
+        </member>
+        <member name="M:API.Controllers.SectorAndSubSectorController.GetSectorSubSectorMappingBySectorID(System.Int32)">
+            <summary>
+            Retrieve sector subsector mapping by passing sector id
+            </summary>
+            <param name="SectorID">Ex : 1001</param>
+        </member>
+        <member name="M:API.Controllers.SectorAndSubSectorController.GetSectorSubSectorMappingBySubSector(System.Int32)">
+            <summary>
+            Retrieve sector subsector mapping by passing subsector id
+            </summary>
+            <param name="SubSectorID">Ex : 1001</param>
+        </member>
+        <member name="M:API.Controllers.SectorAndSubSectorController.InsertSectorSubSectorMapping(System.Int32,System.Int32)">
+            <summary>
+            Insert sector subsecor mapping to the database
+            </summary>
+            <param name="SectorID">Ex : 1001</param>
+            <param name="SubSectorID">Ex : 2001</param>
+        </member>
+        <member name="M:API.Controllers.SectorAndSubSectorController.DeleteMappingSectorSubSector(System.Int32)">
+            <summary>
+            Delete Mapping Sector and SubSector by Mapping ID
+            </summary>
+            <param name="MappingID">Ex : 1</param>
+            <returns></returns>
+        </member>
+        <member name="M:API.Controllers.UsersController.Login(Models.Login)">
+            <summary>
+            Generate JWT token by passing username and password
+            </summary>
+        </member>
+    </members>
+</doc>
